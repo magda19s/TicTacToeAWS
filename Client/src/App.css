@@ -1,0 +1,117 @@
+.main-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3vh;
+  flex-direction: column;
+}
+
+.game-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  animation: pulsate 2s infinite alternate;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    color: #ff0000;
+  }
+  50% {
+    transform: scale(1.2);
+    color: #00ff00;
+  }
+  100% {
+    transform: scale(1);
+    color: #0000ff;
+  }
+}
+
+.tic-tac-toe-animation {
+  /* Add your animation styles here */
+}
+
+.playOnline {
+  font-weight: bold;
+  border: none;
+  background-color: #8f8cf2;
+  font-size: 24px;
+  cursor: pointer;
+  margin-top: 30px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.playOnline:hover {
+  background-color: #6c6aff;
+  transform: translateY(-2px);
+}
+
+.water-background {
+  background-color: #cdbed1;
+  width: 500px;
+}
+
+.game-heading {
+  padding: 5px 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.square-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+.move-detection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+}
+
+.finished-state {
+  font-size: 30px;
+  text-align: center;
+}
+
+.left,
+.right {
+  height: 30px;
+  width: 120px;
+  background-color: #4b495f;
+  border-radius: 15px;
+  padding: 7px 0;
+  padding-top: 7px;
+  font-size: 18px;
+  padding-bottom: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.waiting {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 44px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.current-move-cross {
+  background-color: #3fa7f0 !important;
+}
+
+.current-move-circle {
+  background-color: #dd7f9f !important;
+}

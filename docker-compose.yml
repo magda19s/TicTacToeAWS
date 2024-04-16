@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  socket-io-server:
+    build:
+      context: ./Server
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./Server:/server
+    working_dir: /server
+    command: node server.js
+
+  tictactoe:
+    build:
+      context: ./Client
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./Client:/app
+      - /app/node_modules
+    working_dir: /app
+    command: npm run dev
