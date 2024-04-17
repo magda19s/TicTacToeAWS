@@ -1,7 +1,7 @@
 const { createServer } = require("http");
 const { Server } = require("socket.io");
 
-const localhostURL = "http://localhost:5174/";
+const localhostURL = "http://localhost:5173/";
 
 const httpServer = createServer();
 const io = new Server(httpServer, {

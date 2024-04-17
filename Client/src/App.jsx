@@ -210,19 +210,21 @@ const App = () => {
           finishedState !== "opponentLeftMatch" &&
           finishedState !== "draw" && (
             <h3 className="finished-state">
-              {finishedState === playingAs ? "You " : finishedState} WON THE
-              GAME
+              {finishedState === playingAs ? "You " : finishedState} won the
+              game
             </h3>
           )}
         {finishedState &&
           finishedState !== "opponentLeftMatch" &&
-          finishedState === "draw" && <h3 className="finished-state">DRAW</h3>}
+          finishedState === "draw" && (
+            <h3 className="finished-state">It's a Draw</h3>
+          )}
       </div>
       {!finishedState && opponentName && (
-        <h2>YOU ARE PLAYING AGAINST {opponentName}</h2>
+        <h2>You are playing against {opponentName}</h2>
       )}
       {finishedState && finishedState === "opponentLeftMatch" && (
-        <h2>YOU WON, OPPONENT LEFT</h2>
+        <h2>You won the match, Opponent has left</h2>
       )}
     </div>
   );
